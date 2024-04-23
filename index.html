@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/82dd453f7d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Profile.jpg" class="logo">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#certification">Certification</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Portfolio</p>
+                <h1><span>Lapitan</span>, Jonathan P.</h1>
+            </div>
+            </div>
+        </div>
+        <!-- -----------about----------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/logo.webp" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am an aspiring programmer and grade 11 ICT student at St. Clare College. I am fascinated by technology and science, especially in Artificial Intelligence</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"  onclick="opentab('projects')">Projects</p>
+                            <p class="tab-links" onclick="opentab('certification')">Certification</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C++</span><br>Skill level: 1</li>
+                                <li><span>HTML</span><br>Skill level: 4</li>
+                                <li><span>CSS</span><br>Skill level: 3</li>
+                                <li><span>JavaScript</span><br>Skill level: 2</li>
+                                <li><span>Python</span><br>Skill level: 4</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="projects">
+                            <ul>
+                                <li><span>PrimeFinderWeb</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certification">
+                            <ul>
+                                <li><span>Python</span><br><img src="Images/FreeCodeCamp Certificate.png"></li>                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+             <!-- -----------contact----------- -->
+             <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-right">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p> <i class="fa-solid fa-paper-plane"></i> lapitanethan97@gmail.com</p>
+                            <p> <i class="fa-solid fa-phone"></i> 09293212436</p>
+                                <a href="https://www.instagram.com/ethaniee_?igsh=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Washengbooloyal"><i class="fa-brands fa-square-facebook"></i></a>
+                            </div>
+                    </div>
+                </div>
+             </div>
+    
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+</body>
+</html>
